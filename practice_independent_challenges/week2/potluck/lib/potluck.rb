@@ -20,4 +20,25 @@ class Potluck
     end
     all_from_category
   end
+
+  def menu
+    sorted = @dishes.sort_by { |dish| dish.name }
+
+    menu_hash = {
+      :appetizers => [],
+      :entres => [],
+      :desserts => []
+    }
+
+    sorted.each do |dish|
+      if dish.category == :appetizer
+        menu_hash[:appetizers] << dish.name
+      elsif dish.category == :entre
+        menu_hash[:entres] << dish.name
+      elsif dish.category == :dessert
+        menu_hash[:desserts] << dish.name
+      end
+    end
+    menu_hash
+  end
 end
