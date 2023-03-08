@@ -78,7 +78,7 @@ describe Venue do
 
       venue.kick_out
 
-      expect(venue.over_capacity).to eq(false)
+      expect(venue.over_capacity?).to eq(false)
     end
   end
 

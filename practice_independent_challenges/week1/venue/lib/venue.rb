@@ -20,4 +20,10 @@ class Venue
   def over_capacity?
     @patrons.count > @capacity
   end
+
+  def kick_out
+    while over_capacity?
+      @patrons.pop
+    end
+  end
 end
