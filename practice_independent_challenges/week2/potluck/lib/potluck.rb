@@ -13,7 +13,7 @@ class Potluck
 
   def get_all_from_category(course)
     all_from_category = []
-    @dishes.each do |dish| 
+    @dishes.each do |dish|
       if dish.category == course
         all_from_category << dish
       end
