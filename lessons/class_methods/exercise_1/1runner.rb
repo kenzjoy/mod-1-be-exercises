@@ -2,6 +2,7 @@ require './lib/dog'
 
 max = Dog.new("Max")
 puts max.woof
+puts max.bark
 
 ## Describe what each part of the code above did -
 # `max` =>
