@@ -5,6 +5,8 @@ RSpec.describe Dish do
     @dish = Dish.new('Couscous Salad', :appetizer)
   end
 
+  # Iteration 1
+
   it 'exists' do 
     expect(@dish).to be_a(Dish)
   end
