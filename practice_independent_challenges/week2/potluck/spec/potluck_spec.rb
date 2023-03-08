@@ -42,7 +42,7 @@ RSpec.describe Potluck do
       @potluck.add_dish(@cocktail_meatballs)
       @potluck.add_dish(@candy_salad)
 
-      expect(@potluck.get_all_from_category(:appetizer).to eq(@couscous_salad, @summer_pizza))
+      expect(@potluck.get_all_from_category(:appetizer)).to eq([@couscous_salad, @summer_pizza])
     end
   end
 end
