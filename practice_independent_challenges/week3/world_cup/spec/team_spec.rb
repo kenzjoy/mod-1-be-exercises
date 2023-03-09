@@ -4,6 +4,14 @@ require './lib/player'
 RSpec.describe Team do
   before(:each) do
     @team = Team.new('France')
+    @mbappe = Player.new( {
+      name: 'Kylian Mbappe', 
+      position: 'forward'
+    } )
+    @pogba = Player.new( {
+      name: 'Paul Pogba', 
+      position: 'midfielder'
+    } ) 
   end
 
   it 'exists' do
@@ -27,6 +35,15 @@ RSpec.describe Team do
   describe '#players' do
     it 'returns an array of all the current players on a team' do
       expect(@team.players).to eq([])
+    end
+  end
+
+  describe '#add_player(player)' do
+    it 'adds a player to the team.players array' do
+      @team.add_player(@mbappe)
+      @team.add_player(@pogba)
+
+      expect(@team.players).to eq([@mbappe, @pogba])
     end
   end
 end
