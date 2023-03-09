@@ -50,4 +50,16 @@ RSpec.describe WorldCup do
       expect(@world_cup.active_players_by_position('midfielder')).to eq([@pogba])
     end
   end
+
+  describe '#all_players_by_position' do
+    it 'returns a hash with the positions as the keys and the players as the values' do
+      players_hash = {
+        'forward' => [@mbappe],
+        'midfielder' => [@pogba, @modric],
+        'defender' => [@vida]
+      }
+
+      expect(@world_cup.all_players_by_position).to eq(players_hash)
+    end
+  end
 end
