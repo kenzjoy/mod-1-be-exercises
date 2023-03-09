@@ -69,4 +69,17 @@ RSpec.describe Potluck do
       expect(@potluck.menu).to eq(menu_hash)
     end
   end
+
+  describe '#ratio(category)' do
+    it 'returns a float representing the percentage amount the category exists in the menu' do
+      @potluck.add_dish(@couscous_salad)
+      @potluck.add_dish(@summer_pizza)
+      @potluck.add_dish(@roast_pork)
+      @potluck.add_dish(@cocktail_meatballs)
+      @potluck.add_dish(@candy_salad)
+      @potluck.add_dish(@bean_dip)
+
+      expect(@potluck.ratio(:appetizer)).to eq(50.0)
+    end
+  end
 end

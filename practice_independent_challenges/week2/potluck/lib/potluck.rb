@@ -41,4 +41,9 @@ class Potluck
     end
     menu_hash
   end
+
+  def ratio(category)
+    category_count = get_all_from_category(category).length.to_f
+    (category_count / @dishes.length) * 100
+  end
 end
