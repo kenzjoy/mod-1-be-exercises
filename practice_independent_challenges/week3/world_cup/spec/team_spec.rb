@@ -46,4 +46,14 @@ RSpec.describe Team do
       expect(@team.players).to eq([@mbappe, @pogba])
     end
   end
+
+  describe '#players_by_position(position)' do
+    it 'returns an array of players based on the given position' do
+      @team.add_player(@mbappe)
+      @team.add_player(@pogba)
+
+      expect(@team.players_by_position('midfielder')).to eq([@pogba])
+      expect(@team.players_by_position('defender')).to eq([])
+    end
+  end
 end
