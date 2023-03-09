@@ -23,4 +23,10 @@ RSpec.describe Team do
       expect(@team.eliminated?).to eq(true)
     end
   end
+
+  describe '#players' do
+    it 'returns an array of all the current players on a team' do
+      expect(@team.players).to eq([])
+    end
+  end
 end
