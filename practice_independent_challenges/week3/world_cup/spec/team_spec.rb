@@ -14,5 +14,13 @@ RSpec.describe Team do
     expect(@team.country).to eq('France')
   end
 
-  # expect(@team.eliminated?).to eq(false)
+  describe '#eliminated' do
+    it 'changes the teams status to eliminated' do
+      expect(@team.eliminated?).to eq(false)
+
+      @team.eliminated
+
+      expect(@team.eliminated?).to eq(true)
+    end
+  end
 end
