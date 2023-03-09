@@ -40,4 +40,10 @@ RSpec.describe WorldCup do
     expect(@world_cup.year).to eq(2018)
     expect(@world_cup.teams).to eq([@france, @croatia])
   end
+
+  describe '#active_players_by_position(position)' do
+    it 'returns all non-eliminated players of a given position' do
+      expect(@world_cup.active_players_by_position('midfielder')).to eq([@pogba, @modric])
+    end
+  end
 end
