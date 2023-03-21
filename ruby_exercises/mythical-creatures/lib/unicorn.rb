@@ -6,4 +6,8 @@ class Unicorn
     @name = name
     @color = 'silver'
   end
+
+  def silver?
+    @color == 'silver'
+  end
 end
