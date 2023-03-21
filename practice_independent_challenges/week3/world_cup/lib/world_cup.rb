@@ -36,7 +36,6 @@ class WorldCup
 
     sorted.each do |team|
       team.players.each do |player|
-        # require 'pry'; binding.pry
         if player.position == 'forward'
           players_hash[:forward] << player
         elsif player.position == 'midfielder'
