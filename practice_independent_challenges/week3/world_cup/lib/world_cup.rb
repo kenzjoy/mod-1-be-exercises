@@ -28,22 +28,21 @@ class WorldCup
       end
     end
 
-    players_hash = {}
-    # {
-    #   'forward' => [],
-    #   'midfielder' => [],
-    #   'defender' => []
-    # }
+    players_hash = {
+      :forward => [],
+      :midfielder => [],
+      :defender => []
+    }
 
     sorted.each do |team|
       team.players.each do |player|
         # require 'pry'; binding.pry
         if player.position == 'forward'
-          players_hash[:forward] = player
+          players_hash[:forward] << player
         elsif player.position == 'midfielder'
-          players_hash[:midfielder] = player
+          players_hash[:midfielder] << player
         elsif player.position == 'defender'
-          players_hash[:defender] = player
+          players_hash[:defender] << player
         end
       end
     end
