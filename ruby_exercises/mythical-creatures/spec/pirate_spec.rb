@@ -17,12 +17,12 @@ RSpec.describe Pirate do
     expect(pirate.job).to eq('Scallywag')
   end
 
-  xit 'is not always a scallywag' do
+  it 'is not always a scallywag' do
     pirate = Pirate.new('Jack', 'cook')
     expect(pirate.job).to eq('cook')
   end
 
-  xit 'is not cursed by default' do
+  it 'is not cursed by default' do
     pirate = Pirate.new('Jack')
 
     expect(pirate.cursed?).to be false
