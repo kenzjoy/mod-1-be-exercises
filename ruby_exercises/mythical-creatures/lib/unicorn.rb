@@ -10,4 +10,8 @@ class Unicorn
   def silver?
     @color == 'silver'
   end
+
+  def say(word)
+    "**;* #{word} **;*"
+  end
 end

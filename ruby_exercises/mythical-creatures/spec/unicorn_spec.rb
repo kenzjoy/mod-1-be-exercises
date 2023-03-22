@@ -21,7 +21,7 @@ RSpec.describe Unicorn do
     expect(unicorn.silver?).to be false
   end
 
-  xit 'says sparkly stuff' do
+  it 'says sparkly stuff' do
     unicorn = Unicorn.new('Johnny')
     expect(unicorn.say('Wonderful!')).to eq('**;* Wonderful! **;*')
     expect(unicorn.say('I dont like you very much.')).to eq('**;* I dont like you very much. **;*')
