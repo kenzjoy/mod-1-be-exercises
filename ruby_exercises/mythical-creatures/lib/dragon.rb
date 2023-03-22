@@ -5,7 +5,7 @@ class Dragon
 
   def initialize(name, color, rider)
     @name = name
-    @color = :color
+    @color = color
     @rider = rider
   end
 end
