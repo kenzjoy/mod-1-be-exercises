@@ -7,12 +7,12 @@ RSpec.describe Vampire do
     expect(vampire.name).to eq('Dracula')
   end
 
-  xit 'it can be named something else' do
+  it 'it can be named something else' do
     vampire = Vampire.new('Vladimir')
     expect(vampire.name).to eq('Vladimir')
   end
 
-  xit 'keeps a pet bat by default' do
+  it 'keeps a pet bat by default' do
     vampire = Vampire.new('Ruthven')
     expect(vampire.pet).to eq('bat')
   end
