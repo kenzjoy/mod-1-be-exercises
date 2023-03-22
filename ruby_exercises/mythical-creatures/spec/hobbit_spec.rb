@@ -12,7 +12,7 @@ RSpec.describe Hobbit do
     expect(hobbit.name).to eq('Peregrin')
   end
 
-  xit 'has an unadventurous disposition' do
+  it 'has an unadventurous disposition' do
     hobbit = Hobbit.new('Samwise')
     expect(hobbit.disposition).to eq('homebody')
   end
