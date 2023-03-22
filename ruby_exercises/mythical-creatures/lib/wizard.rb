@@ -5,6 +5,7 @@ class Wizard
     @name = name
     @bearded = bearded
     @rested = true
+    @spells = 0
   end
 
   def bearded?
@@ -16,10 +17,11 @@ class Wizard
   end
 
   def rested?
-    @rested
+    @spells < 3
   end
 
   def cast
+    @spells += 1
     'MAGIC MISSILE!'
   end
 end
