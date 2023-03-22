@@ -18,4 +18,8 @@ class Pirate
   def cursed?
     @heinous_acts > 2
   end
+
+  def rob_ship
+    @booty += 100
+  end
 end
