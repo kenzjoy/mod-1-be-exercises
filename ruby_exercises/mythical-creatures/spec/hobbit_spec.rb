@@ -7,7 +7,7 @@ RSpec.describe Hobbit do
     expect(hobbit.name).to eq('Bilbo')
   end
 
-  xit 'can have another name' do
+  it 'can have another name' do
     hobbit = Hobbit.new('Peregrin')
     expect(hobbit.name).to eq('Peregrin')
   end
