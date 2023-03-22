@@ -6,7 +6,7 @@ RSpec.describe Medusa do
     expect(medusa.name).to eq('Cassiopeia')
   end
 
-  xit 'has no statues when created' do
+  it 'has no statues when created' do
     medusa = Medusa.new('Cassiopeia')
     expect(medusa.statues).to be_empty
   end
