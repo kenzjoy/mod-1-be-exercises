@@ -14,7 +14,7 @@ RSpec.describe Unicorn do
     expect(unicorn.silver?).to be true
   end
 
-  xit 'doesnt have to be silver' do
+  it 'doesnt have to be silver' do
     unicorn = Unicorn.new('Barbara', 'purple')
     expect(unicorn.color).to eq('purple')
     expect(unicorn.silver?).to eq(false)
