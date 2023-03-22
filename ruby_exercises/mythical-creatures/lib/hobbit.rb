@@ -25,4 +25,8 @@ class Hobbit
     end
     @old
   end
+
+  def has_ring?
+    @name == 'Frodo'
+  end
 end
