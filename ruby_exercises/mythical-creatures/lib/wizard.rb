@@ -4,6 +4,7 @@ class Wizard
   def initialize(name, bearded: true)
     @name = name
     @bearded = bearded
+    @rested = true
   end
 
   def bearded?
@@ -12,5 +13,9 @@ class Wizard
 
   def incantation(root_power)
     "sudo #{root_power}"
+  end
+
+  def rested?
+    @rested
   end
 end
