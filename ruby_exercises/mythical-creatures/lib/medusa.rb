@@ -6,4 +6,8 @@ class Medusa
     @name = name
     @statues = []
   end
+
+  def stare(person)
+    @statues << person
+  end
 end

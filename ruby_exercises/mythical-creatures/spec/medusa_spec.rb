@@ -1,4 +1,5 @@
 require './lib/medusa'
+require './lib/person'
 
 RSpec.describe Medusa do
   it 'has a name' do
@@ -11,7 +12,7 @@ RSpec.describe Medusa do
     expect(medusa.statues).to be_empty
   end
 
-  xit 'gains a statue when staring at a person' do
+  it 'gains a statue when staring at a person' do
     medusa = Medusa.new('Cassiopeia')
     victim = Person.new('Perseus')
 
