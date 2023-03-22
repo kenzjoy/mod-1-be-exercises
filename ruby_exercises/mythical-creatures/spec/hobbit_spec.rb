@@ -43,7 +43,7 @@ RSpec.describe Hobbit do
     expect(hobbit.adult?).to be false
   end
 
-  xit 'comes of age at 33' do
+  it 'comes of age at 33' do
     hobbit = Hobbit.new('Otho')
 
     33.times do
@@ -58,7 +58,17 @@ RSpec.describe Hobbit do
     expect(hobbit.adult?).to be true
   end
 
-  xit 'is old at the age of 101' do
+  it 'is old at the age of 101' do
+    hobbit = Hobbit.new('Beatrice')
+
+    expect(hobbit.old?).to be false
+    
+    101.times do
+      hobbit.celebrate_birthday
+    end
+        
+    expect(hobbit.old?).to be true
+
     # create a hobbit
     # have hobbit age 101 years
     # check that hobbit.old? returns true
