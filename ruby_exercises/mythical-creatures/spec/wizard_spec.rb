@@ -22,12 +22,12 @@ RSpec.describe Wizard do
     expect(wizard.bearded?).to be false
   end
 
-  xit 'has root powers' do
+  it 'has root powers' do
     wizard = Wizard.new('Stella', bearded: false)
     expect(wizard.incantation('chown ~/bin')).to eq('sudo chown ~/bin')
   end
 
-  xit 'has many root powers' do
+  it 'has many root powers' do
     wizard = Wizard.new('Sal', bearded: true)
     expect(wizard.incantation('rm -rf /home/mirandax')).to eq('sudo rm -rf /home/mirandax')
   end
