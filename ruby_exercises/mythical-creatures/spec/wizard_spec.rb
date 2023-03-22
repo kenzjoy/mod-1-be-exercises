@@ -36,11 +36,14 @@ RSpec.describe Wizard do
     wizard = Wizard.new('Willy')
 
     expect(wizard.rested?).to be true
-    # create wizard
-    # .rested? returns true
   end
 
-  xit 'can cast spells' do
+  it 'can cast spells' do
+    wizard = Wizard.new('Tricia')
+
+    wizard.cast
+
+    expect(wizard.cast).to eq('MAGIC MISSILE!')
     # create wizard
     # .cast returns "MAGIC MISSILE!"
   end

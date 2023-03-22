@@ -18,4 +18,8 @@ class Wizard
   def rested?
     @rested
   end
+
+  def cast
+    'MAGIC MISSILE!'
+  end
 end
