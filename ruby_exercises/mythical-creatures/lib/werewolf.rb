@@ -1,6 +1,7 @@
 class Werewolf
   attr_reader :name,
-              :location
+              :location,
+              :victims
 
   attr_accessor :human,
                 :wolf,
@@ -12,6 +13,7 @@ class Werewolf
     @human = true
     @wolf = false
     @hungry = false
+    @victims = []
   end
 
   def human?
@@ -38,5 +40,9 @@ class Werewolf
     elsif @wolf == false && @human == true
       @hungry = false
     end
+  end
+
+  def consume(victim)
+    @victims << victim
   end
 end
