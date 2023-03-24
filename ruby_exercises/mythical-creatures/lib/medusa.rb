@@ -8,7 +8,9 @@ class Medusa
   end
 
   def stare(person)
-    person.stoned = true
-    @statues << person
+    if @statues.count < 3
+      person.stoned = true
+      @statues << person
+    end
   end
 end
