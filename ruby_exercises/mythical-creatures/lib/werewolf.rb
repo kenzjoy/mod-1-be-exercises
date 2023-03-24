@@ -24,7 +24,7 @@ class Werewolf
     if @human == true && @wolf == false
       @human = false
       @wolf = true
-    else @human == false && @wolf == true
+    elsif @human == false && @wolf == true
       @human = true
       @wolf = false
     end
