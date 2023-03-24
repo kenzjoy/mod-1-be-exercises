@@ -8,8 +8,7 @@ class Medusa
   end
 
   def stare(person)
-    person.stoned == true
+    person.stoned = true
     @statues << person
-    require 'pry'; binding.pry
   end
 end
