@@ -11,7 +11,7 @@ RSpec.describe Werewolf do
     expect(werewolf.location).to eq('London')
   end
 
-  xit 'is by default human' do
+  it 'is by default human' do
     werewolf = Werewolf.new('David', 'London')
     expect(werewolf.human?).to be true
   end
