@@ -23,7 +23,7 @@ RSpec.describe Werewolf do
     expect(werewolf.human?).to be false
   end
 
-  xit 'when starting as a human, changing again makes it be human again' do
+  it 'when starting as a human, changing again makes it be human again' do
     werewolf = Werewolf.new('David', 'London')
     expect(werewolf.human?).to be true
 
