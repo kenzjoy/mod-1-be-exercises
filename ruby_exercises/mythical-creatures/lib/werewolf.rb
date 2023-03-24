@@ -43,6 +43,8 @@ class Werewolf
   end
 
   def consume(victim)
-    @victims << victim
+    if victim.status != :alive
+      @victims << victim
+    end
   end
 end
