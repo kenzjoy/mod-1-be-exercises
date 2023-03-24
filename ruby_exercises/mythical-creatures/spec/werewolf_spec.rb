@@ -6,7 +6,7 @@ RSpec.describe Werewolf do
     expect(werewolf.name).to eq('David')
   end
 
-  xit 'has a location' do
+  it 'has a location' do
     werewolf = Werewolf.new('David', 'London')
     expect(werewolf.location).to eq('London')
   end
