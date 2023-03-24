@@ -3,13 +3,15 @@ class Werewolf
               :location
 
   attr_accessor :human,
-                :wolf
+                :wolf,
+                :hungry
 
   def initialize(name, location = '')
     @name = name
     @location = location
     @human = true
     @wolf = false
+    @hungry = false
   end
 
   def human?
@@ -28,5 +30,9 @@ class Werewolf
       @human = true
       @wolf = false
     end
+  end
+
+  def hungry?
+    @hungry
   end
 end
