@@ -73,6 +73,10 @@ RSpec.describe Werewolf do
     def initialize
       @status = :alive
     end
+
+    def kill
+      @status = :dead
+    end
   end
 
   it 'consumes a victim' do
@@ -86,8 +90,20 @@ RSpec.describe Werewolf do
     expect(werewolf.victims).to eq([victim])
   end
 
-  xit 'cannot consume a victim if it is in human form' do
-    # your code here
+  it 'cannot consume a victim if it is in human form' do
+    werewolf = Werewolf.new('David', 'London')
+    victim = Victim.new
+
+    expect(werewolf.victims).to eq([])
+    
+    werewolf.consume(victim)
+    
+    expect(werewolf.victims).to eq([])
+    
+    victim.kill
+    werewolf.consume(victim)
+    
+    expect(werewolf.victims).to eq([victim])
   end
 
   xit 'a werewolf that has consumed a human being is no longer hungry' do
