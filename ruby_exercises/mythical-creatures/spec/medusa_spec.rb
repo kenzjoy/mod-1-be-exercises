@@ -22,7 +22,7 @@ RSpec.describe Medusa do
     expect(medusa.statues.first).to be_an_instance_of(Person)
   end
 
-  xit 'turns a person to stone when staring at them' do
+  it 'turns a person to stone when staring at them' do
     medusa = Medusa.new('Cassiopeia')
     victim = Person.new('Perseus')
 
