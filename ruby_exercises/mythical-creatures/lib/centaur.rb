@@ -16,9 +16,9 @@ class Centaur
 
   def shoot
     @cranky_meter += 1
-    if @cranky_meter <= 3
+    if @cranky_meter <= 3 && @laying == false
       'Twang!!!'
-    elsif @cranky_meter > 3
+    elsif @cranky_meter > 3 || @laying == true
       'NO!'
     end
   end

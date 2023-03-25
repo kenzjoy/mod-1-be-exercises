@@ -73,7 +73,7 @@ RSpec.describe Centaur do
     expect(centaur.sleep).to_not eq('NO!')
   end
 
-  xit 'cannot shoot a bow when laying down' do
+  it 'cannot shoot a bow when laying down' do
     centaur = Centaur.new('George', 'Palomino')
     centaur.lay_down
     expect(centaur.shoot).to eq('NO!')
