@@ -29,7 +29,7 @@ RSpec.describe Ogre do
     expect(human.encounter_counter).to eq(1)
   end
 
-  xit 'is noticed by humans every third encounter' do
+  it 'is noticed by humans every third encounter' do
     ogre = Ogre.new('Brak')
     human = Human.new
 
@@ -42,7 +42,7 @@ RSpec.describe Ogre do
     expect(human.notices_ogre?).to be true
   end
 
-  xit 'is noticed by humans the sixth time' do
+  it 'is noticed by humans the sixth time' do
     ogre = Ogre.new('Brak')
     human = Human.new
 
