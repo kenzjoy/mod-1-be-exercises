@@ -25,7 +25,11 @@ class Centaur
 
   def run
     @cranky_meter += 1
-    'Clop clop clop clop!'
+    if @laying == false
+      'Clop clop clop clop!'
+    elsif @laying == true
+      'NO!'
+    end
   end
 
   def cranky?

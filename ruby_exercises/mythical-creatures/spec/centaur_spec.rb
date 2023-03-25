@@ -79,7 +79,7 @@ RSpec.describe Centaur do
     expect(centaur.shoot).to eq('NO!')
   end
 
-  xit 'cannot run while laying down' do
+  it 'cannot run while laying down' do
     centaur = Centaur.new('George', 'Palomino')
     centaur.lay_down
     expect(centaur.run).to eq('NO!')
