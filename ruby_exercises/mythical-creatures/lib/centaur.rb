@@ -58,4 +58,9 @@ class Centaur
   def laying?
     @laying
   end
+
+  def stand_up
+    @standing = true
+    @laying = false
+  end
 end

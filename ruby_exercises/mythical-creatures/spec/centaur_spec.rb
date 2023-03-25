@@ -85,7 +85,7 @@ RSpec.describe Centaur do
     expect(centaur.run).to eq('NO!')
   end
 
-  xit 'can stand up' do
+  it 'can stand up' do
     centaur = Centaur.new('George', 'Palomino')
     centaur.lay_down
     centaur.stand_up
