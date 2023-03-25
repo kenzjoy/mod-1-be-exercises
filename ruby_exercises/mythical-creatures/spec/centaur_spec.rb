@@ -43,7 +43,7 @@ RSpec.describe Centaur do
     expect(centaur.cranky?).to be true
   end
 
-  xit 'will not shoot a bow when cranky' do
+  it 'will not shoot a bow when cranky' do
     centaur = Centaur.new('George', 'Palomino')
 
     expect(centaur.cranky?).to be false

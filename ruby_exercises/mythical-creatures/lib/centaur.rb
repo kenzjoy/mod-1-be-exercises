@@ -15,7 +15,11 @@ class Centaur
 
   def shoot
     @cranky_meter += 1
-    'Twang!!!'
+    if @cranky_meter <= 3
+      'Twang!!!'
+    elsif @cranky_meter > 3
+      'NO!'
+    end
   end
 
   def run
