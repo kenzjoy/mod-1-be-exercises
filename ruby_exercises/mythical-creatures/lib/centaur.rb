@@ -2,12 +2,14 @@ class Centaur
   attr_reader :name, 
               :breed
 
-  attr_accessor :cranky
+  attr_accessor :cranky,
+                :standing
 
   def initialize(name, breed)
     @name = name
     @breed = breed
     @cranky = false
+    @standing = true
   end
 
   def shoot
@@ -20,5 +22,9 @@ class Centaur
 
   def cranky?
     @cranky
+  end
+
+  def standing?
+    @standing
   end
 end

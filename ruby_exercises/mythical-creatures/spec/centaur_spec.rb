@@ -27,7 +27,7 @@ RSpec.describe Centaur do
     expect(centaur.cranky?).to be false
   end
 
-  xit 'when first created, it is standing up' do
+  it 'when first created, it is standing up' do
     centaur = Centaur.new('George', 'Palomino')
     expect(centaur.standing?).to be true
   end
