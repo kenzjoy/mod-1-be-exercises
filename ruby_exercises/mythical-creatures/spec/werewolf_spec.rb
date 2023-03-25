@@ -109,8 +109,18 @@ RSpec.describe Werewolf do
     expect(werewolf.victims).to eq([victim])
   end
 
-  xit 'a werewolf that has consumed a human being is no longer hungry' do
-    # your code here
+  it 'a werewolf that has consumed a human being is no longer hungry' do
+    werewolf = Werewolf.new('David', 'London')
+    victim = Victim.new
+
+    werewolf.change!
+
+    expect(werewolf.hungry?).to be(true)
+    
+    victim.kill
+    werewolf.consume(victim)
+    
+    expect(werewolf.hungry?).to be(false)
   end
 
   xit 'a werewolf who has consumed a victim makes the victim dead' do
