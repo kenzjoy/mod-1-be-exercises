@@ -126,8 +126,16 @@ RSpec.describe Centaur do
     expect(centaur.cranky?).to be false
   end
 
-  xit 'can only drink a potion whilst standing' do
-    # your code here
+  it 'can only drink a potion whilst standing' do
+    centaur = Centaur.new('George', 'Palomino')
+
+    centaur.lay_down
+    
+    expect(centaur.drink_potion).to eq('NO!')
+    
+    centaur.stand_up
+    
+    expect(centaur.drink_potion).to eq('Yummy!')
   end
 
   xit 'gets stick if a potion is drunk while rested' do

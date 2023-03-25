@@ -68,5 +68,10 @@ class Centaur
 
   def drink_potion
     @cranky_meter = 0
+    if @standing == true
+      'Yummy!'
+    elsif @standing == false
+      'NO!'
+    end
   end
 end
