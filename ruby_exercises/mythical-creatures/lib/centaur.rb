@@ -65,4 +65,8 @@ class Centaur
     @standing = true
     @laying = false
   end
+
+  def drink_potion
+    @cranky_meter = 0
+  end
 end

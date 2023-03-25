@@ -112,8 +112,18 @@ RSpec.describe Centaur do
     expect(centaur.run).to eq('Clop clop clop clop!')
   end
 
-  xit 'becomes rested after drinking a potion' do
-    # your code here
+  it 'becomes rested after drinking a potion' do
+    centaur = Centaur.new('George', 'Palomino')
+
+    centaur.shoot
+    centaur.run
+    centaur.shoot
+
+    expect(centaur.cranky?).to be true
+
+    centaur.drink_potion
+
+    expect(centaur.cranky?).to be false
   end
 
   xit 'can only drink a potion whilst standing' do
