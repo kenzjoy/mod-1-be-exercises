@@ -1,5 +1,6 @@
 require './spec/spec_helper'
 require './lib/ogre'
+require './lib/human'
 
 RSpec.describe Ogre do
   it 'has a name' do
@@ -12,13 +13,13 @@ RSpec.describe Ogre do
     expect(ogre.home).to eq('Swamp')
   end
 
-  xit 'doesnt have to live in a swamp' do
+  it 'doesnt have to live in a swamp' do
     ogre = Ogre.new('Brak', 'Castle')
 
     expect(ogre.home).to eq('Castle')
   end
 
-  xit 'can meets humans' do
+  it 'can meets humans' do
     ogre = Ogre.new('Brak')
     human = Human.new
     expect(human.name).to eq('Jane')
