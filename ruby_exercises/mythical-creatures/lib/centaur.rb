@@ -10,6 +10,7 @@ class Centaur
     @breed = breed
     @cranky = false
     @standing = true
+    @laying = false
     @cranky_meter = 0
   end
 
@@ -43,5 +44,14 @@ class Centaur
     if @standing == true
       'NO!'
     end
+  end
+
+  def lay_down
+    @standing = false
+    @laying = true
+  end
+
+  def laying?
+    @laying
   end
 end
