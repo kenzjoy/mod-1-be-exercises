@@ -51,7 +51,7 @@ RSpec.describe Ogre do
     expect(human.notices_ogre?).to be true
   end
 
-  xit 'can swing a club' do
+  it 'can swing a club' do
     ogre = Ogre.new('Brak')
     human = Human.new
 
