@@ -22,7 +22,7 @@ RSpec.describe Centaur do
     expect(centaur.run).to eq('Clop clop clop clop!')
   end
 
-  xit 'when first created, it is not cranky' do
+  it 'when first created, it is not cranky' do
     centaur = Centaur.new('George', 'Palomino')
     expect(centaur.cranky?).to be false
   end
