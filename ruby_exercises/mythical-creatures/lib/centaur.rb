@@ -6,4 +6,8 @@ class Centaur
     @name = name
     @breed = breed
   end
+
+  def shoot
+    'Twang!!!'
+  end
 end
