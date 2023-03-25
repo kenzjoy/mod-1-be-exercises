@@ -3,7 +3,8 @@ class Centaur
               :breed
 
   attr_accessor :cranky,
-                :standing
+                :standing,
+                :laying
 
   def initialize(name, breed)
     @name = name
@@ -45,6 +46,7 @@ class Centaur
   end
 
   def sleep
+    @cranky_meter = 0
     if @standing == true
       'NO!'
     end

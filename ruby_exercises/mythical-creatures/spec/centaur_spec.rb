@@ -92,7 +92,7 @@ RSpec.describe Centaur do
     expect(centaur.standing?).to be true
   end
 
-  xit 'is no longer cranky after sleeping' do
+  it 'is no longer cranky after sleeping' do
     centaur = Centaur.new('George', 'Palomino')
 
     centaur.shoot
