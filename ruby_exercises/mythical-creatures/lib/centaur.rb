@@ -10,4 +10,8 @@ class Centaur
   def shoot
     'Twang!!!'
   end
+
+  def run
+    'Clop clop clop clop!'
+  end
 end

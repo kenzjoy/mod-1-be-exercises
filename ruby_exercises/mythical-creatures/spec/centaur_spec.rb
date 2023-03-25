@@ -17,7 +17,7 @@ RSpec.describe Centaur do
     expect(centaur.shoot).to eq('Twang!!!')
   end
 
-  xit 'makes a horse sound when it runs' do
+  it 'makes a horse sound when it runs' do
     centaur = Centaur.new('George', 'Palomino')
     expect(centaur.run).to eq('Clop clop clop clop!')
   end
