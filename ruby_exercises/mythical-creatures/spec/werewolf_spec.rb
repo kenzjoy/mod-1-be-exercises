@@ -77,6 +77,10 @@ RSpec.describe Werewolf do
     def kill
       @status = :dead
     end
+
+    def dead?
+      @status == :dead
+    end
   end
 
   it 'consumes a victim' do
@@ -123,7 +127,18 @@ RSpec.describe Werewolf do
     expect(werewolf.hungry?).to be(false)
   end
 
-  xit 'a werewolf who has consumed a victim makes the victim dead' do
-    # your code here
+  it 'a werewolf who has consumed a victim makes the victim dead' do
+    werewolf = Werewolf.new('David', 'London')
+    victim = Victim.new
+
+    werewolf.change!
+
+    expect(werewolf.hungry?).to be(true)
+    expect(victim.dead?).to be(false)
+
+    victim.kill
+    werewolf.consume(victim)
+    
+    expect(victim.dead?).to be(true)
   end
 end
