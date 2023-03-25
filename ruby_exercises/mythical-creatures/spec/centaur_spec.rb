@@ -67,7 +67,7 @@ RSpec.describe Centaur do
     expect(centaur.laying?).to be true
   end
 
-  xit 'can sleep when laying down' do
+  it 'can sleep when laying down' do
     centaur = Centaur.new('George', 'Palomino')
     centaur.lay_down
     expect(centaur.sleep).to_not eq('NO!')
