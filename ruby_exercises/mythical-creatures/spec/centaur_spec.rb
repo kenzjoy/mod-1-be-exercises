@@ -32,7 +32,7 @@ RSpec.describe Centaur do
     expect(centaur.standing?).to be true
   end
 
-  xit 'gets tired after running or shooting a bow thrice' do
+  it 'gets tired after running or shooting a bow thrice' do
     centaur = Centaur.new('George', 'Palomino')
     expect(centaur.cranky?).to be false
 
