@@ -30,7 +30,21 @@ RSpec.describe Retirement do
   end
 
   it 'errors with a negative retirement age' do
-    # write your test here
+    retire = Retirement.new
+
+    result = retire.calculate(25, -65)
+    expected = "Error. Age cannot be negative."
+
+    expect(result).to eq(expected)
+  end
+
+  it 'can tell which age is the current age and the retirement age' do
+    retire = Retirement.new
+
+    result = retire.calculate(70, 39)
+    expected = "You have 31 years left until you can retire. It is 2015, so you can retire in 2046."
+
+    expect(result).to eq(expected)
   end
 end
 
