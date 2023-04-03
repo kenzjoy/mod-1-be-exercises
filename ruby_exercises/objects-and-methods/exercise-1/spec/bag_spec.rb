@@ -33,9 +33,11 @@ RSpec.describe Bag do
     expect(bag.empty?).to be false
   end
 
-  xit 'can count candies' do
+  it 'can count candies' do
     bag = Bag.new
-    bag << Candy.new("Caramelized Almonds")
+    almonds = Candy.new("Caramelized Almonds")
+
+    bag.add_candy(almonds)
 
     expect(bag.count).to eq(1)
   end

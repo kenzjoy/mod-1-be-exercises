@@ -20,4 +20,8 @@ class Bag
   def add_candy(candy)
     @candies << candy
   end
+
+  def count
+    @candies.count
+  end
 end
