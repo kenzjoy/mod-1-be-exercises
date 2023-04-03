@@ -1,4 +1,3 @@
-require 'rspec'
 require_relative '../lib/bag'
 require_relative '../lib/candy'
 
