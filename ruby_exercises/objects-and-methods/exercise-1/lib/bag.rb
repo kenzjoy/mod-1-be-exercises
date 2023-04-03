@@ -10,7 +10,11 @@ class Bag
   end
 
   def empty?
-    @empty
+    if !@candies.count.zero?
+      @empty == false
+    else 
+      @empty
+    end
   end
 
   def add_candy(candy)

@@ -24,9 +24,11 @@ RSpec.describe Bag do
     expect(bag.candies).to eq([candy])
   end
 
-  xit 'is not empty when it has candies' do
+  it 'is not empty when it has candies' do
     bag = Bag.new
-    bag << Candy.new("Nerds")
+    nerds = Candy.new("Nerds")
+
+    bag.add_candy(nerds)
 
     expect(bag.empty?).to be false
   end
