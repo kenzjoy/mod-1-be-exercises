@@ -1,10 +1,12 @@
 class Bag
   attr_accessor :empty,
-                :count
+                :count,
+                :candies
 
   def initialize
     @empty = true
     @count = 0
+    @candies = []
   end
 
   def empty?
