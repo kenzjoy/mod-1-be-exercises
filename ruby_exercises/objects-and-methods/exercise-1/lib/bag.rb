@@ -12,4 +12,8 @@ class Bag
   def empty?
     @empty
   end
+
+  def add_candy(candy)
+    @candies << candy
+  end
 end
