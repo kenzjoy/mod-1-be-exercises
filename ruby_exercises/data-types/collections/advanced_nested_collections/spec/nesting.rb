@@ -1,3 +1,4 @@
+# require 'pry'; binding.pry
 def stores 
   {
     olive_garden: {
