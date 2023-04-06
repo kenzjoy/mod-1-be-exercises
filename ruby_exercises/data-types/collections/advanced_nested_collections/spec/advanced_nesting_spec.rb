@@ -29,9 +29,9 @@ RSpec.describe 'Advanced Nested Collections' do
     expect(pancake_ingredients).to eq(expected)
   end
 
-  xit 'test 3' do
+  it 'test 3' do
     # Find the price of risotto
-    risotto_price = ____
+    risotto_price = stores[:olive_garden][:dishes][0][:price]
 
     expect(risotto_price).to eq(12)
   end
