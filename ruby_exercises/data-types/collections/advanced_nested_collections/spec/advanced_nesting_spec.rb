@@ -44,9 +44,9 @@ RSpec.describe 'Advanced Nested Collections' do
     expect(big_mac_ingredients).to eq(expected)
   end
 
-  xit 'test 5' do
+  it 'test 5' do
     # Find a list of restaurants
-    store_names = ____
+    store_names = stores.keys
 
     expected = [:olive_garden, :dennys, :macdonalds]
     expect(store_names).to eq(expected)
