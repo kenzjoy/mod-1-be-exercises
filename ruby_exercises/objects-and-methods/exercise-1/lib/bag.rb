@@ -22,6 +22,14 @@ class Bag
   end
 
   def count
-    @candies.count
+    @candies.count += @count
+  end
+
+  def contains?(candy)
+    if @candies.include?(candy)
+      true
+    else 
+      false
+    end
   end
 end
