@@ -52,9 +52,12 @@ RSpec.describe 'Advanced Nested Collections' do
     expect(store_names).to eq(expected)
   end
 
-  xit 'test 6' do
+  it 'test 6' do
     # Find dishes names for Olive Garden
-    dishes_names = ____
+    dishes_names = []
+    stores[:olive_garden][:dishes].each do |dish|
+      dishes_names << dish[:name]
+    end
 
     expect(dishes_names).to eq(['Risotto', 'Steak'])
   end
